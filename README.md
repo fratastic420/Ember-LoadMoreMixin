@@ -21,6 +21,13 @@ App.ApplicationController = Ember.ArrayController.extend(Ember.LoadMoreMixin,{
 });
 
 4. In your template you can add your button anywhere, just bind the action 'loadMore' and target it to your controller.
+updatedContent will be what you will use to loop through your model, as the model stays preserved as is
+
+so just loop like so
+{{#each item in updatedContent}}
+  {{item}}
+{{/each}}
+
 You can disable loading when reaching the length of your model by binding the disabled attr to the hasMore function.
 <button {{bind-attr disabled=hasMore}} {{action "loadMore" target="controller"}}>Load More Content</button>
 
