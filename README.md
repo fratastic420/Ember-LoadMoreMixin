@@ -9,7 +9,7 @@ Mixin for Limiting Model from Controller and Appending at will.
 
 App.ApplicationRoute = Ember.Route.extend({
   model: function() {
-    //whatever you need to do here/
+    //whatever you need to do here
   }
 });
 
